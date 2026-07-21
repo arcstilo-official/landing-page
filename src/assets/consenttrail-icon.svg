@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 28 28" fill="none" role="img" aria-labelledby="ct_title">
+<title id="ct_title">ConsentTrail</title>
+<defs>
+  <linearGradient id="ct_logo_grad" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#60a5fa"/>
+    <stop offset="100%" stop-color="#1C43B9"/>
+  </linearGradient>
+</defs>
+<path d="M31 18.5c-1.8-1.5-4-2.5-6.5-2.5a9 9 0 0 0-9 9 9 9 0 0 0 9 9c2.5 0 4.8-1 6.5-2.5" stroke="url(#ct_logo_grad)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+<path d="M28.5 22.5L23 28l-2.5-2.5" stroke="url(#ct_logo_grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="31.5" cy="18.5" r="2" fill="url(#ct_logo_grad)"/>
+<circle cx="31.5" cy="31.5" r="2" fill="url(#ct_logo_grad)"/>
+</svg>

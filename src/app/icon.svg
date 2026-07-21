@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title>Arcstilo Social Avatar Circle</title>
+<desc>Circular social avatar with Arcstilo symbol.</desc>
+<defs>
+  <linearGradient id="soc_arcGrad" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#061A3A"/>
+    <stop offset="0.36" stop-color="#0A3F90"/>
+    <stop offset="0.72" stop-color="#24B6F2"/>
+    <stop offset="1" stop-color="#F7FCFF"/>
+  </linearGradient>
+  <linearGradient id="soc_arcGradSoft" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0C2D67"/>
+    <stop offset="0.55" stop-color="#2087E4"/>
+    <stop offset="1" stop-color="#A8F2FF"/>
+  </linearGradient>
+  <linearGradient id="soc_iceStroke" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#75E4FF"/>
+    <stop offset="1" stop-color="#FFFFFF"/>
+  </linearGradient>
+  <radialGradient id="soc_coreGlow" cx="50%" cy="50%" r="60%">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    <stop offset="0.30" stop-color="#61D8FF" stop-opacity="0.52"/>
+    <stop offset="1" stop-color="#061A3A" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soc_softShadow" x="-30%" y="-40%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#02112C" flood-opacity="0.24"/>
+  </filter>
+  <filter id="soc_smallShadow" x="-30%" y="-40%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#02112C" flood-opacity="0.28"/>
+  </filter>
+  <filter id="soc_fineGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <style>
+    .brand { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 8px; font-weight: 700; }
+    .brandTight { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 5px; font-weight: 740; }
+    .brandSmall { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 3px; font-weight: 750; }
+    .utility { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 2.5px; font-weight: 600; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 2px; font-weight: 650; }
+  </style>
+</defs>
+
+<circle cx="256" cy="256" r="256" fill="#061A3A"/>
+<circle cx="256" cy="252" r="180" fill="url(#soc_arcGradSoft)" opacity=".24"/>
+<path d="M74 390 C161 255 298 172 441 101" fill="none" stroke="#FFFFFF" stroke-width="2" opacity=".10"/>
+<g transform="translate(128 113) scale(1.02)">
+  <g filter="url(#soc_smallShadow)">
+    <ellipse cx="128" cy="122" rx="72" ry="70" fill="url(#soc_coreGlow)" opacity=".70"/>
+    <path d="M61 205 L113 55 C118 40 137 39 143 55 L199 205" fill="none" stroke="url(#soc_arcGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M84 153 C123 127 160 141 203 86" fill="none" stroke="url(#soc_iceStroke)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M204 86 L236 75 L222 107 Z" fill="url(#soc_iceStroke)"/>
+    <path d="M105 190 C126 176 153 172 178 181" fill="none" stroke="url(#soc_arcGradSoft)" stroke-width="7" stroke-linecap="round" opacity=".48"/>
+    <circle cx="204" cy="86" r="5" fill="#FFFFFF" opacity=".92"/>
+  </g></g>
+</svg>

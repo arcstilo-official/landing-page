@@ -1,0 +1,60 @@
+// Set this to your repo name (e.g. "/landing-page") only if you deploy to
+// https://<org>.github.io/<repo> without a custom domain. Leave empty when
+// serving from a custom domain via a public/CNAME file.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
+  images: {
+    unoptimized: true,
+  },
+  webpack(config) {
+    // Grab the existing rule that handles SVG imports
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.(".svg")
+    );
+
+    config.module.rules.push(
+      // Reapply the existing rule, but only for svg imports ending in ?url
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/, // *.svg?url
+      },
+      // Convert all other *.svg imports to React components
+      {
+        test: /\.svg$/i,
+        issuer: fileLoaderRule.issuer,
+        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: "preset-default",
+                    // Keep viewBox even when it matches width/height exactly.
+                    // Without this, SVGO strips it and CSS-resized icons clip
+                    // instead of scaling.
+                    params: { overrides: { removeViewBox: false } },
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      }
+    );
+
+    // Modify the file loader rule to ignore *.svg, since we have it handled now.
+    fileLoaderRule.exclude = /\.svg$/i;
+
+    return config;
+  },
+};
+
+export default nextConfig;

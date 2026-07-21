@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+<title>Arcstilo Signature Wordmark Clean</title>
+<desc>Final Arcstilo wordmark with the tagline and dotted underline removed.</desc>
+<defs>
+  <linearGradient id="final_arcGrad" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#061A3A"/>
+    <stop offset="0.36" stop-color="#0A3F90"/>
+    <stop offset="0.72" stop-color="#24B6F2"/>
+    <stop offset="1" stop-color="#F7FCFF"/>
+  </linearGradient>
+  <linearGradient id="final_arcGradSoft" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0C2D67"/>
+    <stop offset="0.55" stop-color="#2087E4"/>
+    <stop offset="1" stop-color="#A8F2FF"/>
+  </linearGradient>
+  <linearGradient id="final_iceStroke" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#75E4FF"/>
+    <stop offset="1" stop-color="#FFFFFF"/>
+  </linearGradient>
+  <radialGradient id="final_coreGlow" cx="50%" cy="50%" r="60%">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    <stop offset="0.30" stop-color="#61D8FF" stop-opacity="0.52"/>
+    <stop offset="1" stop-color="#061A3A" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="final_softShadow" x="-30%" y="-40%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#02112C" flood-opacity="0.24"/>
+  </filter>
+  <filter id="final_smallShadow" x="-30%" y="-40%" width="160%" height="180%">
+    <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#02112C" flood-opacity="0.28"/>
+  </filter>
+  <filter id="final_fineGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <style>
+    .brand { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 8px; font-weight: 700; }
+    .brandTight { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 5px; font-weight: 740; }
+    .brandSmall { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 3px; font-weight: 750; }
+    .utility { font-family: Inter, Avenir Next, Segoe UI, Helvetica, Arial, sans-serif; letter-spacing: 2.5px; font-weight: 600; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 2px; font-weight: 650; }
+  </style>
+</defs>
+
+<rect width="1200" height="280" fill="none"/>
+<g transform="translate(108 82)">
+  <text x="0" y="97" class="brand" font-size="94" fill="#061A3A">ARCSTILO</text>
+  <path d="M15 137 C186 119 304 152 451 132 C535 121 597 89 665 45" fill="none" stroke="url(#final_arcGrad)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M670 43 L719 24 L699 72 Z" fill="url(#final_iceStroke)"/>
+</g>
+</svg>

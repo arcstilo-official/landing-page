@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply px-5 py-3 rounded-xl font-medium text-[15px]
+        inline-flex justify-center items-center tracking-tight transition-all duration-200;
+    }
+
+    .btn-primary {
+        @apply bg-navy-900 text-white hover:bg-navy-700 shadow-card;
+    }
+
+    .btn-accent {
+        @apply bg-gradient-to-r from-azure-600 to-azure-400 text-white hover:brightness-110 shadow-premium hover:-translate-y-0.5;
+    }
+
+    .btn-outline {
+        @apply border border-navy-900/[0.15] text-navy-900 bg-white hover:border-navy-900/30;
+    }
+
+    .btn-outline-dark {
+        @apply border border-white/25 text-white bg-white/5 hover:bg-white/10 hover:border-white/40;
+    }
+
+    .btn-text {
+        @apply text-navy-900 bg-transparent hover:text-azure-600;
+    }
+
+    .logo-ticker-image {
+        @apply h-10 md:h-12 w-auto object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300;
+    }
+
+    .tag {
+      @apply text-xs font-semibold uppercase inline-flex border border-azure-400/30
+      bg-azure-50 text-azure-600 px-3 py-1.5 rounded-full tracking-wider;
+    }
+
+    .tag-dark {
+      @apply text-xs font-semibold uppercase inline-flex border border-white/20
+      bg-white/10 text-azure-200 px-3 py-1.5 rounded-full tracking-wider backdrop-blur-sm;
+    }
+
+    .section-title {
+        @apply text-center text-3xl md:text-[48px] md:leading-[54px] font-bold tracking-tight
+        text-navy-900;
+    }
+
+    .section-title-dark {
+        @apply text-center text-3xl md:text-[48px] md:leading-[54px] font-bold tracking-tight
+        text-white;
+    }
+
+    .section-description {
+        @apply text-center text-lg md:text-xl leading-[30px]
+        tracking-tight text-navy-500;
+    }
+
+    .section-description-dark {
+        @apply text-center text-lg md:text-xl leading-[30px]
+        tracking-tight text-white/60;
+    }
+
+    .section-heading{
+        @apply max-w-[600px] mx-auto;
+    }
+
+    .card {
+        @apply p-8 md:p-10 border border-navy-900/[0.08] rounded-3xl bg-white shadow-card max-w-xs w-full;
+    }
+
+    .panel {
+        @apply rounded-3xl border border-navy-900/[0.08] bg-white shadow-card;
+    }
+
+    .panel-dark {
+        @apply rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+    }
+
+    .hover-lift {
+        @apply transition-all duration-300 hover:shadow-premium hover:-translate-y-1;
+    }
+
+    .hover-lift-dark {
+        @apply transition-all duration-300 hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-1;
+    }
+
+    .eyebrow {
+        @apply text-azure-500 font-semibold text-sm tracking-[0.2em] uppercase;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-gradient-to-b from-navy-900 to-azure-600 text-transparent bg-clip-text;
+    }
+
+    .bg-grid {
+        background-image:
+            linear-gradient(to right, rgba(10, 63, 144, 0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(10, 63, 144, 0.06) 1px, transparent 1px);
+        background-size: 44px 44px;
+    }
+
+    .bg-grid-dark {
+        background-image:
+            linear-gradient(to right, rgba(117, 228, 255, 0.07) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(117, 228, 255, 0.07) 1px, transparent 1px);
+        background-size: 44px 44px;
+    }
+
+    .glow-blob {
+        @apply absolute rounded-full blur-3xl pointer-events-none;
+    }
+}
